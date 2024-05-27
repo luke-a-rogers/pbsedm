@@ -15,14 +15,19 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 
 An R package to implement some of the methods of empirical dynamic modelling
 
-The name `pbsEDM` combines our workplace, the Pacific Biological Station (PBS) in British Columbia, Canada, with empirical dynamic modelling (EDM), the focus of the package. The package was developed in conjuction with a manuscript currently under review. 
+This package complements our new paper:
 
-The package implements the simplex and S-map algorithms of empirical dynamic modelling, and creates visualisations to help understand the methods, for example:
+Edwards, A.M, L.A. Rogers, and C.A. Holt (2024). Explaining empirical dynamic modelling using verbal, graphical and mathematical approaches. Ecology and Evolution, 14:e10903, 1-12. https://doi.org/10.1002/ece3.10903 
+
+Part of the Supporting Information is a narrated movie (based on animations produced by this package), downloadable [here](https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fece3.10903&file=ece310903-sup-0002-MovieS1.zip).
+
+The package implements the simplex and S-map algorithms of empirical dynamic modelling (EDM), and creates visualisations to help understand the methods, for example:
 
 ![](vignettes/pbsEDM_movie_tstar_39.gif)
 
-Users can also analyse their own data. The package complements our manuscript *Explaining empirical dynamic modelling using verbal, graphical, and mathematical approaches* being submitted as a Research Article to *Ecology and Evolution*. The 
-package can be installed directly from GitHub (see instructions below).
+Users can also analyse their own data. The package can be installed directly from GitHub (see instructions below).
+
+The name `pbsEDM` combines two acronyms -- PBS (our workplace, the Pacific Biological Station, in British Columbia, Canada) and EDM. 
 
 ## Vignettes
 
@@ -61,6 +66,7 @@ plot_explain_edm_movie_save(E_results[[1]])           # Figure A.2
 
 plot_explain_edm_all_tstar_movie_save(E_results[[1]]) # Figure A.3
 ```
+
 ## Installation instructions
 
 ```
@@ -78,6 +84,11 @@ options(timeout = 1200)
 ```
 and then try and install again.
 
+## Background
+
+Our motivation for this work was initially to fully understand the steps of EDM, which led to use writing this package. As described in our paper: 
+
+Our intention is for our pbsEDM R package to complement the popular R package [rEDM](https://cran.r-project.org/package=rEDM) and its [tutorial](https://github.com/SugiharaLab/rEDM/blob/master/vignettes/rEDM-tutorial.pdf), plus the Python package [pyEDM](https://pepy.tech/project/pyEDM), to aid understanding and reproducibility. All intermediate calculations are available as output in pbsEDM and all code is in R, while rEDM contains C++ code (which is faster than R code but less readable than R to many ecologists); however, rEDM and pyEDM also include advanced algorithms that are not in pbsEDM. 
 
 ## Citation
 
